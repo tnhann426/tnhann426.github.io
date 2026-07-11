@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HanTooDev'z Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body class="dark">
+  <div class="theme-switch-container">
+    <label class="switch">
+      <input type="checkbox" id="dark-toggle" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="container fade-in">
+    <div id="intro" class="bio-card main-profile">
+      <div class="avatar-wrapper">
+        <img id="logo-img" src="logo.png" alt="logo :0" class="avatar" style="cursor: pointer;">
+      </div>
+      
+      <h1 id="welcome-title">Tô Ng. H. An (Han Nguyen)</h1>
+      <div class="sub-info">
+        <div>Student, THPT An Dương Vương</div>
+        <div>Long Khanh, Dong Nai, Vietnam</div>
+      </div>
+      <div class="social-links">
+        <a href="https://tnhann426.github.io" target="_blank"><i class="fa-solid fa-circle-check" style="color: #1d9bf0;"></i></a>
+        <span class="divider">—</span>
+        <a href="https://linkedin.com/in/h-an-to-b663ab416" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/tnhann426" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.tiktok.com/@eMBee_dangsuy" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://t.me/tnhann426" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+      <p id="welcome-desc">
+        Banking • Fintech • Software Development<br>
+        Project: this is my project<br>
+        Japanese name: 綾小路 春 (Ayanokoji Haru)
+      </p>
+
+      <div class="action-group">
+        <button id="btn-share-trigger" class="btn-bio btn-share">Chia sẻ</button>
+        <button id="btn-contact-trigger" class="btn-bio btn-contact">Liên hệ</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="share-modal" class="notepad-modal">
+    <div class="notepad-window">
+      <div class="notepad-header">
+        <div class="notepad-title"><i class="fa-regular fa-file-lines"></i> Chia sẻ hồ sơ</div>
+        <button id="btn-close-notepad" class="notepad-close-btn">×</button>
+      </div>
+      <div class="notepad-body">
+        <div class="qr-section">
+          <img src="QR.jpg" alt="QR Code" class="notepad-qr-img">
+        </div>
+        <div class="link-section">
+          <div class="link-header">
+            <span class="link-title">Link page</span>
+            <button class="notepad-copy-btn" data-copy-target="share-url"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+          <input type="text" id="share-url" value="https://tnhann426.github.io" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact-modal" class="notepad-modal">
+    <div class="notepad-window">
+      <div class="notepad-header">
+        <div class="notepad-title"><i class="fa-regular fa-file-lines"></i> Liên hệ</div>
+        <button id="btn-close-contact" class="notepad-close-btn">×</button>
+      </div>
+      <div class="office-tabs">
+        <button class="tab-btn active" data-tab="contact">Liên hệ</button>
+        <button class="tab-btn" data-tab="zalo">Zalo</button>
+        <button class="tab-btn" data-tab="line">Line</button>
+      </div>
+      <div class="notepad-body">
+        <div id="tab-contact" class="tab-content active">
+          <div class="link-section">
+            <div class="link-header">
+              <span class="link-title">Phone Number</span>
+              <button class="notepad-copy-btn" data-copy-target="phone-url"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+            <input type="text" id="phone-url" value="+84 365 270 360" readonly>
+          </div>
+          <div class="link-section">
+            <div class="link-header">
+              <span class="link-title">Email Address</span>
+              <button class="notepad-copy-btn" data-copy-target="email-url"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+            <input type="text" id="email-url" value="tnhann.426@gmail.com" readonly>
+          </div>
+        </div>
+        <div id="tab-zalo" class="tab-content">
+          <div class="qr-section">
+            <img src="zalo.jpg" alt="Zalo QR" class="notepad-qr-img">
+          </div>
+          <div class="link-section">
+            <div class="link-header">
+              <span class="link-title">Zalo Link</span>
+              <button class="notepad-copy-btn" data-copy-target="zalo-url"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+            <input type="text" id="zalo-url" value="https://zalo.me/0365270360" readonly>
+          </div>
+        </div>
+        <div id="tab-line" class="tab-content">
+          <div class="qr-section">
+            <img src="line.jpg" alt="Line QR" class="notepad-qr-img">
+          </div>
+          <div class="link-section">
+            <div class="link-header">
+              <span class="link-title">Line Link</span>
+              <button class="notepad-copy-btn" data-copy-target="line-url"><i class="fa-regular fa-copy"></i> Copy</button>
+            </div>
+            <input type="text" id="line-url" value="https://line.me/ti/p/chf4r8QUm8" readonly>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="donate-modal" class="notepad-modal">
+    <div class="notepad-window">
+      <div class="notepad-header">
+        <div class="notepad-title"><i class="fa-regular fa-file-lines"></i> Donate_VietQR.txt - Notepad</div>
+        <button id="btn-close-donate" class="notepad-close-btn">×</button>
+      </div>
+      <div class="notepad-body" style="max-height: 420px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px;">
+        <div class="qr-section">
+          <img src="bank-qr.png" alt="VietQR Donate" class="notepad-qr-img">
+        </div>
+        <div class="link-section">
+          <div class="link-header">
+            <span class="link-title">Ngân hàng thụ hưởng</span>
+            <button class="notepad-copy-btn" data-copy-target="donate-bank"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+          <input type="text" id="donate-bank" value="TPBank (NH TMCP Tiên Phong)" readonly>
+        </div>
+        <div class="link-section">
+          <div class="link-header">
+            <span class="link-title">Số tài khoản</span>
+            <button class="notepad-copy-btn" data-copy-target="donate-stk"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+          <input type="text" id="donate-stk" value="444 1306 2010" readonly>
+        </div>
+        <div class="link-section">
+          <div class="link-header">
+            <span class="link-title">Chủ tài khoản</span>
+            <button class="notepad-copy-btn" data-copy-target="donate-name"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+          <input type="text" id="donate-name" value="TO NGUYEN HOAI AN" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setDarkMode(on) {
+      document.body.classList.toggle('dark', on);
+      document.getElementById('logo-img').src = on ? 'logo-dark.png' : 'logo.png';
+      document.getElementById('dark-toggle').checked = on;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const savedTheme = localStorage.getItem('theme');
+      let isDark = savedTheme ? (savedTheme === 'dark') : true;
+      setDarkMode(isDark);
+
+      document.getElementById('dark-toggle').onchange = function () {
+        isDark = this.checked;
+        setDarkMode(isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      };
+
+      // Cấu hình đóng mở đồng bộ cho cả 3 loại Modals
+      const modals = {
+        share: { modal: document.getElementById('share-modal'), trigger: document.getElementById('btn-share-trigger'), close: document.getElementById('btn-close-notepad') },
+        contact: { modal: document.getElementById('contact-modal'), trigger: document.getElementById('btn-contact-trigger'), close: document.getElementById('btn-close-contact') },
+        donate: { modal: document.getElementById('donate-modal'), trigger: document.getElementById('logo-img'), close: document.getElementById('btn-close-donate') }
+      };
+
+      Object.values(modals).forEach(({ modal, trigger, close }) => {
+        if (trigger && modal && close) {
+          trigger.onclick = function () { modal.classList.add('active'); };
+          close.onclick = function () { modal.classList.remove('active'); };
+          modal.onclick = function (e) { if (e.target === modal) modal.classList.remove('active'); };
+        }
+      });
+
+      // Chuyển đổi Tab Liên hệ
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const targetTab = button.getAttribute('data-tab');
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+
+          button.classList.add('active');
+          const targetContent = document.getElementById(`tab-${targetTab}`);
+          if (targetContent) targetContent.classList.add('active');
+        });
+      });
+
+      // Xử lý nút Copy thông minh toàn cục
+      const copyButtons = document.querySelectorAll('.notepad-copy-btn');
+      copyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-copy-target');
+          const inputElement = document.getElementById(targetId);
+          
+          if (inputElement) {
+            inputElement.select();
+            inputElement.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(inputElement.value);
+
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            setTimeout(() => { btn.innerHTML = originalHTML; }, 2000);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
