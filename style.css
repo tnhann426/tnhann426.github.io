@@ -488,7 +488,7 @@ body.dark .notepad-copy-btn {
   width: 100%;
   box-sizing: border-box;
   padding: 8px 12px;
-  font-family: 'Consolas', monospace;
+  font-family: 'Inter', monospace;
   font-size: 13px;
   border: 1px solid #cccccc;
   border-radius: 4px;
