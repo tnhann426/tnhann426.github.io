@@ -183,7 +183,6 @@
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
       };
 
-      // Cấu hình đóng mở đồng bộ cho cả 3 loại Modals
       const modals = {
         share: { modal: document.getElementById('share-modal'), trigger: document.getElementById('btn-share-trigger'), close: document.getElementById('btn-close-notepad') },
         contact: { modal: document.getElementById('contact-modal'), trigger: document.getElementById('btn-contact-trigger'), close: document.getElementById('btn-close-contact') },
@@ -198,7 +197,6 @@
         }
       });
 
-      // Chuyển đổi Tab Liên hệ
       const tabButtons = document.querySelectorAll('.tab-btn');
       const tabContents = document.querySelectorAll('.tab-content');
 
@@ -214,7 +212,6 @@
         });
       });
 
-      // Xử lý nút Copy thông minh toàn cục
       const copyButtons = document.querySelectorAll('.notepad-copy-btn');
       copyButtons.forEach(btn => {
         btn.addEventListener('click', () => {
